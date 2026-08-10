@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDH Architecture & Sparsity Inspector</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="app">
+        <header class="top-bar">
+            <h1>BDH Inspector</h1>
+            <div class="input-selector">
+                <label>Input:</label>
+                <select id="inputSelect">
+                    <option value="0">"The cat sat"</option>
+                    <option value="1">"Machine learning is"</option>
+                    <option value="2">"The quick brown fox..."</option>
+                </select>
+            </div>
+        </header>
+
+        <div class="main-layout">
+            <aside class="left-panel" id="layerTree">
+                <h3>Layer Pipeline</h3>
+                <div id="treeContent"></div>
+            </aside>
+
+            <main class="center-panel" id="centerPanel">
+                <div id="vizContainer"></div>
+            </main>
+
+            <aside class="right-panel" id="rightPanel">
+                <h3>Signal Stats</h3>
+                <div id="statsContent">
+                    <p class="placeholder">Select a layer to see stats</p>
+                </div>
+            </aside>
+        </div>
+
+        <nav class="bottom-bar">
+            <button class="signal-btn active" data-signal="pipeline">Pipeline Flow</button>
+            <button class="signal-btn" data-signal="sparsity">Sparsity</button>
+            <button class="signal-btn" data-signal="activations">Activations</button>
+            <button class="signal-btn" data-signal="attention">Attention</button>
+            <button class="signal-btn" data-signal="rope">RoPE</button>
+        </nav>
+    </div>
+
+  
