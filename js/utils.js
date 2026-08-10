@@ -7,3 +7,16 @@ function colorFor(type) {
   return map[type] || '#8b949e';
 }
 
+function groupCaptures(captures) {
+  const blocks = [];
+  let current = [];
+  captures.forEach((c, i) => {
+    if (c.module_path === 'embed' && i > 0) {
+      blocks.push(current);
+      current = [];
+    }
+    current.push(c);
+  });
+  if (current.length) blocks.push(current);
+  return blocks;
+}
