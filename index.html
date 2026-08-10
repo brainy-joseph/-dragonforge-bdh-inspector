@@ -11,7 +11,7 @@
         <header class="top-bar">
             <h1>BDH Inspector</h1>
             <div class="input-selector">
-                <label>Input:</label>
+                <label for="inputSelect">Input:</label>
                 <select id="inputSelect">
                     <option value="0">"The cat sat"</option>
                     <option value="1">"Machine learning is"</option>
@@ -23,7 +23,7 @@
         <div class="main-layout">
             <aside class="left-panel" id="layerTree">
                 <h3>Layer Pipeline</h3>
-                <div id="treeContent"></div>
+                <div id="treeContent" class="tree-container"></div>
             </aside>
 
             <main class="center-panel" id="centerPanel">
@@ -47,11 +47,12 @@
         </nav>
     </div>
 
-    <script src="js/data.js"></script>
-    <script src="js/utils.js"></script>
-    <script src="js/pipeline.js"></script>
-    <script src="js/sparsity.js"></script>
-    <script src="js/comparison.js"></script>
-    <script src="js/app.js"></script>
+
+    <script src="data.js" defer></script>
+    <script src="js/utils.js" defer></script>
+    <script src="js/pipeline.js" defer></script>
+    <script src="js/sparsity.js" defer></script>
+    <script src="js/comparison.js" defer></script>
+    <script src="js/app.js" defer></script>
 </body>
 </html>
