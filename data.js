@@ -15,4 +15,4 @@ const BDH_DATA = {
     ],
     "final_output": {"name":"final","shape":[1,11,256],"numel":2816,"mean":0.008,"std":0.33,"min":-0.96,"max":0.99,"sparsity":0.0,"sample":[0.2,-0.1,0.3,-0.2,0.1,0.4,-0.3,0.0,-0.5,0.2]}
   }]
-};
+}; 
