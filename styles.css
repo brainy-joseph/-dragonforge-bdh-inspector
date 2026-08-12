@@ -95,15 +95,45 @@ body{
 .token-strip{ font-family:monospace; font-size:11px; color:var(--dim); margin-bottom:8px; }
 
 
-.sparkline { margin-top: 8px !important; padding: 6px !important; }
-.spark-bar { opacity: 0.5 !important; border-radius: 1px !important; }
-.stat-row .sparkline { font-size: 9px !important; line-height: 1.3 !important; }
+.sparkline {
+  display: flex !important;
+  align-items: flex-end !important;
+  gap: 2px !important;
+  height: 36px !important;        
+  margin-top: 8px !important;
+  padding: 6px !important;
+  background: var(--bg-dark) !important;
+  border-radius: 6px !important;
+  border: 1px solid var(--border) !important;
+  overflow: visible !important;
+}
+
+.spark-bar {
+  flex: 1 !important;              
+  background: var(--accent-blue) !important;
+  border-radius: 1px !important;
+  min-height: 2px !important;
+  opacity: 0.65 !important;       
+  transition: transform 0.1s !important;
+}
 
 
-@media (max-width: 480px) {
-  .sparkline { 
-    height: 24px !important; 
-    overflow: hidden !important; 
-    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+@media (max-width: 600px) {
+  .sparkline {
+    height: 30px !important;       /* Even smaller on mobile */
+    margin-top: 6px !important;
+    gap: 1px !important;           /* Tighter gap */
+  }
+  
+  .stat-row {
+    font-size: 11px !important;    /* Tighter spacing below */
+    line-height: 1.3 !important;
+    padding: 5px 0 !important;     /* Less vertical spacing */
+  }
+}
+
+@media (min-width: 768px) {
+  .sparkline {
+    height: 40px !important;
   }
 }
