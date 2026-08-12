@@ -1,7 +1,5 @@
 const BDH_DATA = {
   "version": "test",
-{
-  "version": "6.0-light",
   "model": "BDH",
   "total_params": 25296896,
   "num_inputs": 1,
