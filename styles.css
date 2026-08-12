@@ -137,3 +137,32 @@ body{
     height: 40px !important;
   }
 }
+
+
+.brand-container { display: flex; align-items: baseline; gap: 12px; }
+.version-tag { 
+    font-size: 11px; color: #8b949e; background: #21262d; 
+    padding: 2px 8px; border-radius: 12px; border: 1px solid #30363d; 
+    font-family: monospace;
+}
+.dashboard-container { 
+    max-width: 1000px; margin: 0 auto; padding: 20px; 
+    display: flex; flex-direction: column; gap: 20px; 
+}
+.card-header { 
+    display: flex; justify-content: space-between; align-items: center; 
+    margin-bottom: 16px; border-bottom: 1px solid #30363d; padding-bottom: 8px; 
+}
+.card-header h3 { 
+    margin: 0; font-size: 12px; text-transform: uppercase; 
+    letter-spacing: 1px; color: #8b949e; font-weight: 600; 
+}
+.card-meta { 
+    font-size: 11px; color: #3fb950; font-family: monospace; 
+    background: rgba(63, 185, 80, 0.1); padding: 2px 6px; border-radius: 4px; 
+}
+.app-footer { 
+    text-align: center; padding: 20px; color: #8b949e; font-size: 12px; 
+    border-top: 1px solid #30363d; margin-top: 20px; 
+    display: flex; justify-content: space-between; max-width: 1000px; margin-left: auto; margin-right: auto;
+}
