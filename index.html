@@ -1,64 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="BDH Inspector: A structural and statistical observability tool for the Dragon Hatchling architecture.">
-  <meta name="theme-color" content="#0d1117">
-  <title>BDH Inspector | Dragon Hatchling Observability</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BDH Inspector - A lightweight observability tool for the Dragon Hatchling architecture.">
+    <title>BDH Inspector | Dragon Hatchling Observability</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐉</text></svg>">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header class="top-bar">
-    <div class="header-brand">
-      <h1>BDH Inspector</h1>
-      <span class="subtitle">Dragon Hatchling Observability Tool</span>
-    </div>
-    <div class="header-controls">
-      <label for="inputSelect" class="input-label">Active Probe</label>
-      <select id="inputSelect">
-        <option value="0">"The cat sat" (11 tokens)</option>
-      </select>
-    </div>
-  </header>
+    <header class="top-bar">
+        <div class="brand-container">
+            <h1>BDH Inspector</h1>
+            <span class="version-tag">v1.0 • 25M Parameters</span>
+        </div>
+        <div class="input-selector">
+            <label for="inputSelect">Active Sequence:</label>
+            <select id="inputSelect">
+                <option value="0">"The cat sat" (11 tokens)</option>
+            </select>
+        </div>
+    </header>
 
-  <nav class="bottom-bar">
-    <button class="signal-btn active" data-signal="pipeline">Pipeline</button>
-    <button class="signal-btn" data-signal="sparsity">Sparsity</button>
-    <button class="signal-btn" data-signal="activations">Activations</button>
-    <button class="signal-btn" data-signal="attention">Attention</button>
-    <button class="signal-btn" data-signal="rope">RoPE</button>
-  </nav>
+    <nav class="bottom-bar">
+        <button class="signal-btn active" data-signal="pipeline">Pipeline Flow</button>
+        <button class="signal-btn" data-signal="sparsity">Sparsity</button>
+        <button class="signal-btn" data-signal="activations">Activations</button>
+        <button class="signal-btn" data-signal="attention">Attention</button>
+        <button class="signal-btn" data-signal="rope">RoPE</button>
+    </nav>
 
-  <section class="card">
-    <h3>Layer Pipeline <span style="font-size: 0.8em; color: var(--text-secondary, #8b949e); font-weight: normal; margin-left: 8px;">// 32 sub-layers</span></h3>
-    <div id="treeContent"></div>
-  </section>
+    <main class="dashboard-container">
+        <section class="card">
+            <div class="card-header">
+                <h3>Layer Pipeline</h3>
+                <span class="card-meta">32 Modules Captured</span>
+            </div>
+            <div id="treeContent"></div>
+        </section>
 
-  <section class="card">
-    <h3>Visualization <span style="font-size: 0.8em; color: var(--text-secondary, #8b949e); font-weight: normal; margin-left: 8px;">// Topology & Signals</span></h3>
-    <div id="vizContainer"></div>
-  </section>
+        <section class="card">
+            <div class="card-header">
+                <h3>Visualization</h3>
+                <span class="card-meta">Live Render</span>
+            </div>
+            <div id="vizContainer"></div>
+        </section>
 
-  <section class="card">
-    <h3>Signal Stats <span style="font-size: 0.8em; color: var(--text-secondary, #8b949e); font-weight: normal; margin-left: 8px;">// Tensor Statistics</span></h3>
-    <div id="statsContent">
-      <p class="placeholder">Select a layer to see stats</p>
-    </div>
-  </section>
+        <section class="card">
+            <div class="card-header">
+                <h3>Signal Stats</h3>
+                <span class="card-meta">Tensor Metrics</span>
+            </div>
+            <div id="statsContent">
+                <p class="placeholder">Select a layer from the pipeline to inspect tensor statistics.</p>
+            </div>
+        </section>
+    </main>
 
-  <footer style="text-align: center; padding: 20px; color: #8b949e; font-size: 12px; border-top: 1px solid #30363d; margin-top: 24px;">
-    <div>BDH Inspector v1.0 • Built for StarForge 2026 DragonForge Track</div>
-    <div style="margin-top: 4px; opacity: 0.7;">Independent community project. Not affiliated with Pathway Technology, Inc.</div>
-  </footer>
+    <footer class="app-footer">
+        <span>BDH Inspector &copy; 2026</span>
+        <span>DragonForge Hackathon Entry</span>
+    </footer>
 
-  <script src="data.js"></script>
-  <script src="js/utils.js"></script>
-  <script src="js/pipeline.js"></script>
-  <script src="js/sparsity.js"></script>
-  <script src="js/comparison.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/topology.js"></script>
+    <script src="data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/pipeline.js"></script>
+    <script src="js/sparsity.js"></script>
+    <script src="js/comparison.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/topology.js"></script>
 </body>
 </html>
