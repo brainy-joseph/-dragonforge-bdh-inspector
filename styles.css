@@ -154,3 +154,12 @@ body{ background:var(--bg); color:var(--text); font:14px/1.5 Inter,system-ui,san
   .sidebar{ width:100% !important; max-height:280px !important; }
   .main{ overflow:visible !important; }
 }
+
+
+/* ==== PATCH v3 - internal scrolling ==== */
+.main{ overflow-y:auto !important; }
+.main .panel{ flex-shrink:0 !important; }
+
+#vizContainer{ max-height:65vh; overflow-y:auto; }
+#statsContent{ max-height:45vh; overflow-y:auto; }
+.side-body{ max-height:70vh; overflow-y:auto; }
