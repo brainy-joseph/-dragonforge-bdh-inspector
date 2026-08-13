@@ -163,3 +163,60 @@ body{ background:var(--bg); color:var(--text); font:14px/1.5 Inter,system-ui,san
 #vizContainer{ max-height:65vh; overflow-y:auto; }
 #statsContent{ max-height:45vh; overflow-y:auto; }
 .side-body{ max-height:70vh; overflow-y:auto; }
+
+
+/* Miscellaneous Dropdown */
+.misc-container {
+  position: relative;
+  display: inline-block;
+}
+
+.misc-btn {
+  position: relative;
+}
+
+.misc-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px;
+  min-width: 160px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.2s ease;
+  z-index: 1000;
+}
+
+.misc-dropdown.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.misc-option {
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--dim);
+  font: 500 12px 'JetBrains Mono';
+  padding: 8px 12px;
+  text-align: left;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.misc-option:hover {
+  background: var(--panel2);
+  color: var(--text);
+}
+
+.misc-option:active {
+  background: var(--border);
+}
