@@ -16,16 +16,16 @@ Team Members : Aarav Srivastava, Prakhar Yadav, Rudranshu Singhal, Yusuf Abbas
 
 ## What you can see
 
-- **Pipeline** — the layer sequence across all 6 repeated levels, with tensor shapes.
-- **Sparsity** — fraction of zero activations per layer (BDH's sparse, ReLU-gated latent space).
-- **Activations** — side-by-side comparison of the same statistics across 3 different prompts.
-- **Layer stats** — click any layer in the tree to see numel, mean, std, min/max, sparsity and a sample sparkline.
+- **Pipeline** : the layer sequence across all 6 repeated levels, with tensor shapes.
+- **Sparsity** : fraction of zero activations per layer (BDH's sparse, ReLU-gated latent space).
+- **Activations** : side-by-side comparison of the same statistics across 3 different prompts.
+- **Layer stats** : click any layer in the tree to see numel, mean, std, min/max, sparsity and a sample sparkline.
 
 ## What the data shows (measured on the public model)
 
-- **Strictly-causal attention fingerprint** — attention-output sparsity is exactly `1/T` (1/11, 1/19, 1/43 across the three prompts): the first token sees nothing, matching the `tril(diagonal=-1)` mask in `bdh.py`.
+- **Strictly-causal attention fingerprint** : attention-output sparsity is exactly `1/T` (1/11, 1/19, 1/43 across the three prompts): the first token sees nothing, matching the `tril(diagonal=-1)` mask in `bdh.py`.
 - **Gated sparsity ≈ 0.76–0.77** at every level consistent with two ~50%-sparse ReLU latents being multiplied (1 − 0.5² = 0.75).
-- **Signal amplification across repeated levels** — attention-output std grows level by level (≈309 → 442 → 581 → 685 on "The cat sat"), even without training.
+- **Signal amplification across repeated levels** : attention-output std grows level by level (≈309 → 442 → 581 → 685 on "The cat sat"), even without training.
 
 ## An honest note
 
