@@ -5,7 +5,7 @@ A small web microscope for Pathway's **Dragon Hatchling (BDH)** architecture. It
 **🔗 Live demo: https://brainy-joseph.github.io/-dragonforge-bdh-inspector/**
 *(no install, no local server, just open the link)*
 
-Team Members : Aarav Srivastava, Prakhar Yadav, Rudranshu Singhal, Yusuf Abbas
+Team Members : Aarav Srivastava, Prakhar Yadav, Rudranshu Singhal, Yusuf Abbas 
 
 
 ---
