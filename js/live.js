@@ -1,4 +1,4 @@
-// live.js - architecture-faithful JS mirror of bdh.py (eval mode, deterministic fresh init)
+
 (function () {
   var D = 256, NH = 4, N = 8192, LEVELS = 6, THETA = 65536, MAXT = 48;
   var W = null;
@@ -112,7 +112,7 @@
 
   var note = document.createElement('p');
   note.style.cssText = 'font:400 10px "JetBrains Mono";color:#8b98ab;margin-top:6px';
-  note.textContent = 'Live sandbox: architecture-faithful JS mirror of bdh.py with fresh deterministic init - statistically equivalent, not byte-identical to captured presets.';
+  note.textContent = 'Live sandbox: architecture-faithful JS mirror of bdh.py with fresh deterministic init statistically equivalent, not byte-identical to captured presets.';
   document.querySelector('.probe-bar').appendChild(note);
 
   var btn = document.createElement('button');
