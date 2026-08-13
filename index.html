@@ -41,6 +41,15 @@
   <button class="signal-btn" data-signal="activations">◉ Activations</button>
   <button class="signal-btn" data-signal="attention">∿ Attention</button>
   <button class="signal-btn" data-signal="rope">⊞ RoPE</button>
+  
+  <div class="misc-container">
+    <button class="signal-btn misc-btn" id="miscToggle">⊕ Misc ▾</button>
+    <div class="misc-dropdown" id="miscDropdown">
+      <button class="misc-option" data-signal="topology">⬢ Topology</button>
+      <button class="misc-option" data-signal="gain">⚡ Signal Gain</button>
+      <button class="misc-option" data-signal="insights">💡 Insights</button>
+    </div>
+  </div>
 </nav>
 
 <div class="layout">
@@ -82,6 +91,7 @@
 <script src="js/gain.js"></script>
 <script src="js/insights.js"></script>
 <script src="js/live.js"></script>
+
 <script>
 (function () {
   var sel = document.getElementById('inputSelect');
@@ -106,6 +116,57 @@
   }
   sel.addEventListener('change', sync);
   sync();
+})();
+
+// Miscellaneous dropdown controller
+(function () {
+  var toggle = document.getElementById('miscToggle');
+  var dropdown = document.getElementById('miscDropdown');
+  if (!toggle || !dropdown) return;
+
+  toggle.addEventListener('click', function (e) {
+    e.stopPropagation();
+    dropdown.classList.toggle('open');
+  });
+
+  dropdown.querySelectorAll('.misc-option').forEach(function (opt) {
+    opt.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var signal = opt.getAttribute('data-signal');
+      
+      // Deactivate all main tabs
+      document.querySelectorAll('.bottom-bar > .signal-btn').forEach(function (b) {
+        b.classList.remove('active');
+      });
+      
+      // Activate misc button
+      toggle.classList.add('active');
+      toggle.textContent = '⊕ ' + opt.textContent.trim() + ' ▾';
+      
+      // Trigger the signal change
+      document.querySelectorAll('.signal-btn').forEach(function (b) {
+        if (b.getAttribute('data-signal') === signal) {
+          b.click();
+        }
+      });
+      
+      // Close dropdown
+      dropdown.classList.remove('open');
+    });
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function () {
+    dropdown.classList.remove('open');
+  });
+
+  // Reset misc button when main tab clicked
+  document.querySelectorAll('.bottom-bar > .signal-btn').forEach(function (b) {
+    b.addEventListener('click', function () {
+      toggle.classList.remove('active');
+      toggle.textContent = '⊕ Misc ▾';
+    });
+  });
 })();
 </script>
 </body>
