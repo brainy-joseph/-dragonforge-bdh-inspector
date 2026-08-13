@@ -1,6 +1,6 @@
 # 🐉 BDH Inspector 
 
-A small web microscope for Pathway's **Dragon Hatchling (BDH)** architecture. It visualizes real per-layer activation statistics like shapes, sparsity, mean / std / min / max, and samples, captured by instrumenting the official public model with forward hooks.
+A small web microscope for Pathway's **Dragon Hatchling (BDH)** architecture. It visualizes real per-layer activation statistics like shapes, sparsity, mean / std / min / max, and samples, captured by instrumenting the official public model with forward hooks. This is a student team project for a hackathon.
 
 **🔗 Live demo: https://brainy-joseph.github.io/-dragonforge-bdh-inspector/**
 *(no install, no local server, just open the link)*
