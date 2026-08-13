@@ -7,6 +7,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+/* Miscellaneous box (sidebar) */
+.misc-box{ margin:10px 8px 12px; border:1px solid var(--border); border-radius:10px; background:var(--panel); overflow:hidden; }
+.misc-toggle{ width:100%; display:flex; justify-content:space-between; align-items:center; background:var(--panel2); border:none; color:var(--cyan); font:600 11px 'JetBrains Mono'; letter-spacing:.08em; text-transform:uppercase; padding:10px 12px; cursor:pointer; }
+.misc-toggle:hover{ background:var(--border); }
+.misc-panel{ display:none; padding:8px; }
+.misc-box.open .misc-panel{ display:block; }
+.misc-panel .signal-btn{ display:block; width:100%; margin:0 0 6px; text-align:left; background:var(--bg); }
+.misc-panel .signal-btn:last-child{ margin-bottom:0; }
+</style>
 </head>
 <body>
 
@@ -106,6 +116,26 @@
   }
   sel.addEventListener('change', sync);
   sync();
+})();
+
+/* Move Topology / Signal Gain / Insights into a sidebar Misc box (non-destructive) */
+(function () {
+  var sideBody = document.querySelector('.side-body');
+  if (!sideBody) return;
+  var box = document.createElement('div');
+  box.className = 'misc-box';
+  box.innerHTML = '<button type="button" class="misc-toggle" id="miscToggle"><span>⊕ Miscellaneous</span><span id="miscArrow">▸</span></button><div class="misc-panel" id="miscPanel"></div>';
+  sideBody.appendChild(box);
+  var panel = box.querySelector('#miscPanel');
+  ['topoBtn', 'gainBtn', 'insightsBtn'].forEach(function (id) {
+    var b = document.getElementById(id);
+    if (b) panel.appendChild(b);
+  });
+  var arrow = box.querySelector('#miscArrow');
+  box.querySelector('#miscToggle').addEventListener('click', function () {
+    box.classList.toggle('open');
+    arrow.textContent = box.classList.contains('open') ? '▾' : '▸';
+  });
 })();
 </script>
 </body>
