@@ -26,6 +26,7 @@ Team Members : Aarav Srivastava, Prakhar Yadav, Rudranshu Singhal, Yusuf Abbas
 - **Strictly-causal attention fingerprint** : attention-output sparsity is exactly `1/T` (1/11, 1/19, 1/43 across the three prompts): the first token sees nothing, matching the `tril(diagonal=-1)` mask in `bdh.py`.
 - **Gated sparsity ≈ 0.76–0.77** at every level consistent with two ~50%-sparse ReLU latents being multiplied (1 − 0.5² = 0.75).
 - **Signal amplification across repeated levels** : attention-output std grows level by level (≈309 → 442 → 581 → 685 on "The cat sat"), even without training.
+- Scrolling through the sparsity bars, the `drop` module at every level stood out: ~77.4% zeros, consistent across all 6 repeated levels. That number felt too specific to be accidental. Tracing it back through the original hackathon model, we found it comes from **two ~50%-sparse ReLU latents being multiplied**.
 
 ## An honest note
 
