@@ -132,3 +132,25 @@ body{ background:var(--bg); color:var(--text); font:14px/1.5 Inter,system-ui,san
   .main{ overflow:visible; padding:14px; }
   .status-chips{ display:none; }
 }
+
+/* ==== PATCH v2 (append at very end) ==== */
+#statsContent .stat-row{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-start !important;
+  gap:6px !important;
+}
+#statsContent .sparkline{
+  grid-column:1/-1 !important;
+  height:60px !important;
+  overflow:hidden !important;
+}
+#statsContent .spark-bar{ max-height:100% !important; }
+
+@media(max-width:1023px){
+  .bottom-bar{ flex-wrap:wrap !important; overflow-x:visible !important; }
+  body{ overflow:auto !important; }
+  .layout{ flex-direction:column !important; overflow:visible !important; }
+  .sidebar{ width:100% !important; max-height:280px !important; }
+  .main{ overflow:visible !important; }
+}
