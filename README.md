@@ -79,6 +79,7 @@ The official `pathwaycom/bdh` repository ships **no pretrained weights**, so eve
 
 
 **Special thanks to our partners for their support and infrastructure:**
+
 🤝 **Pathway**  
 🤝 **Rime**  
 🤝 **Weya**  
