@@ -83,6 +83,8 @@ The official `pathwaycom/bdh` repository ships **no pretrained weights**, so eve
 🤝 **Weya**  
 🤝 **Qdrant**  
 
+> **Attribution & Licensing:** The file `bdh.py` in this repository is an unmodified copy of the official Dragon Hatchling (BDH) model implementation, © 2025 Pathway Technology, Inc., originally published at [github.com/pathwaycom/bdh](https://github.com/pathwaycom/bdh) and used under the terms of the MIT License. The original copyright notice and license terms are preserved in full at the top of the file. This repository is an independent student project for a hackathon.
+
 **Architecture & Code:** 
 * [pathwaycom/bdh](https://github.com/pathwaycom/bdh) (MIT)
 * Paper: *The Dragon Hatchling: The Missing Link between the Transformer and Models of the Brain* — [arXiv:2509.26507](https://arxiv.org/abs/2509.26507)
