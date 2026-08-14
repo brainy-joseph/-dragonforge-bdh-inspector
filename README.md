@@ -26,6 +26,9 @@ We contribute a dependency-free, open-source "web microscope" alongside a reusab
 
 **🔗 [Try the Live Web Microscope Here](https://brainy-joseph.github.io/-dragonforge-bdh-inspector/)**
 
+*(Please find the video demo of the BDH Inspector in action below)*
+📺 **[https://youtube.com/shorts/3SROEMSa6nI]**
+
 
 
 ---
