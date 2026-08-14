@@ -93,7 +93,7 @@ This project was developed by our team: **Aarav Srivastava, Prakhar Yadav, Rudra
 ## 🛠️ Tech Stack
 - **Model:** BDH (Dragon Hatchling) — official PyTorch implementation (MIT)
 - **Instrumentation:** Python + PyTorch forward hooks
-- **Frontend:** Vanilla JS, HTML5, CSS3 (zero dependencies)
+- **Frontend:** JS, HTML5, CSS3 (zero dependencies)
 - **Hosting:** GitHub Pages
 
 
