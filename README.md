@@ -5,8 +5,6 @@ A small web microscope for Pathway's **Dragon Hatchling (BDH)** architecture. It
 **🔗 Live demo: https://brainy-joseph.github.io/-dragonforge-bdh-inspector/**
 *(no install, no local server, just open the link)*
 
-**Team Members:** Aarav Srivastava, Prakhar Yadav, Rudranshu Singhal, Yusuf Abbas 
-
 ---
 
 ## 1️⃣ Project Description
@@ -89,7 +87,6 @@ The official `pathwaycom/bdh` repository ships **no pretrained weights**, so eve
 * [pathwaycom/bdh](https://github.com/pathwaycom/bdh) (MIT)
 * Paper: *The Dragon Hatchling: The Missing Link between the Transformer and Models of the Brain* — [arXiv:2509.26507](https://arxiv.org/abs/2509.26507)
 
-This project was developed by our team: **Aarav Srivastava, Prakhar Yadav, Rudranshu Singhal, and Yusuf Abbas**.
 
 ## 🛠️ Tech Stack
 - **Model:** BDH (Dragon Hatchling) — official PyTorch implementation (MIT)
