@@ -20,6 +20,12 @@ Pathway's Dragon Hatchling (BDH) introduces a post-Transformer architecture with
 **Scientific & Development Contributions:**
 We contribute a dependency-free, open-source "web microscope" alongside a reusable Python instrumentation pipeline. By capturing tensor statistics during forward passes, our project establishes an empirical baseline for freshly initialized BDH models. Furthermore, the same pipeline can be applied to trained checkpoints to study emergent phenomena, bridging the gap between theoretical papers and practical implementation.
 
+## 🛠️ Tech Stack
+- **Model:** BDH (Dragon Hatchling) — official PyTorch implementation (MIT)
+- **Instrumentation:** Python + PyTorch forward hooks
+- **Frontend:** Vanilla JS, HTML5, CSS3 (zero dependencies)
+- **Hosting:** GitHub Pages
+
 ---
 
 ## 2️⃣ Product Demo
